@@ -46,12 +46,12 @@ public final class GameCanvas extends JComponent{
 	}
 	public void paintComponent(final Graphics g){
 		System.out.println("paintComponent -"+Thread.currentThread());
-		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, getWidth(),getHeight());
 		g.setColor(Color.GREEN);
+		g.fillRect(0, 0, getWidth(),getHeight());
+		g.setColor(Color.RED);
 	g.drawLine(0,0,getWidth(),getHeight());
 	g.setColor(Color.BLUE);
-	g.fillArc(pacmanX-PACMAN_RADIUS, pacmanY-PACMAN_RADIUS,2*PACMAN_RADIUS, 2*PACMAN_RADIUS, 20, 320);
+	g.fillArc(pacmanX-PACMAN_RADIUS, pacmanY-PACMAN_RADIUS,2*PACMAN_RADIUS, 2*PACMAN_RADIUS, 40, 320);
 	
 	}
 
