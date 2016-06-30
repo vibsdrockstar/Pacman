@@ -12,13 +12,13 @@ import java.awt.event.MouseEvent;
 
 public final class GameCanvas extends JComponent{
 	private static final Dimension PREFERRED_SIZE=new Dimension(500,400);
-	private static final int PACMAN_RADIUS=20;
+	private static final int PACMAN_RADIUS=25;
 	private int pacmanX;
 	private int pacmanY;
 	
 	public GameCanvas(){
-		pacmanX=100;
-		pacmanY=100;
+		pacmanX=200;
+		pacmanY=200;
 		//register listeners
 		addMouseListener(new MouseAdapter(){
 			public void mousePressed(final MouseEvent ev){
@@ -50,7 +50,7 @@ public final class GameCanvas extends JComponent{
 		g.fillRect(0, 0, getWidth(),getHeight());
 		g.setColor(Color.GREEN);
 	g.drawLine(0,0,getWidth(),getHeight());
-	g.setColor(Color.YELLOW);
+	g.setColor(Color.BLUE);
 	g.fillArc(pacmanX-PACMAN_RADIUS, pacmanY-PACMAN_RADIUS,2*PACMAN_RADIUS, 2*PACMAN_RADIUS, 20, 320);
 	
 	}
